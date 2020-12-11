@@ -560,6 +560,7 @@ get_pkgs() {
         case $os in
             (Linux*)
                 # Commands which print packages one per line.
+				has pmm        && pmm-query -l
                 has bonsai     && bonsai list
                 has crux       && pkginfo -i
                 has pacman-key && pacman -Qq
